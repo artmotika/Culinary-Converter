@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VolumeSetting">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/settingVolumeCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="20dp">
+
+            <SeekBar
+                android:id="@+id/seekBarVolume"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:max="1000"
+                android:progress="100" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/puttingVolumeCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dp"
+            app:cardCornerRadius="15dp">
+
+            <EditText
+                android:id="@+id/editNumberVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="1"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:fontFamily="@font/montserrat"
+                android:imeOptions="actionDone"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/settingTextVolume"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/montserrat"
+            android:text="ml"
+            android:textAlignment="center"
+            android:textSize="17dp" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        android:paddingHorizontal="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/printingVolumesCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/white">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:paddingVertical="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/volumeLayout1">
+
+                        <ImageButton
+                            android:id="@+id/imageVolume1"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText1"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume1"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout1"
+                        android:id="@+id/volumeLayout2"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume2"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText2"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume2"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout2"
+                        android:id="@+id/volumeLayout3"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume3"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText3"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume3"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout3"
+                        android:id="@+id/volumeLayout4"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume4"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText4"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume4"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout4"
+                        android:id="@+id/volumeLayout5"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume5"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText5"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume5"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout5"
+                        android:id="@+id/volumeLayout6"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume6"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText6"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume6"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout6"
+                        android:id="@+id/volumeLayout7"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume7"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText7"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume7"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout7"
+                        android:id="@+id/volumeLayout8"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume8"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText8"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume8"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout8"
+                        android:id="@+id/volumeLayout9"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume9"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText9"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume9"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout9"
+                        android:id="@+id/volumeLayout10"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume10"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText10"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume10"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below = "@+id/volumeLayout10"
+                        android:id="@+id/volumeLayout11"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imageVolume11"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:paddingEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/volume"
+                            android:scaleType="fitEnd"
+                            android:background="@color/white"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/volumeLayoutText11"
+                            android:layout_marginStart="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/settingTextVolume11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 ml"
+                                android:fontFamily="@font/montserrat"/>
+
+                            <TextView
+                                android:id="@+id/settingTextVolumeRus11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/settingTextVolume11"
+                                android:text="Русский текст"
+                                android:fontFamily="@font/montserrat"/>
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

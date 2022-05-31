@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name"> <font color="#49cc66">Кулинарный конвертер</font></string>
+    <string name="select_message">Выберите объём, который вы хотите конвертировать</string>
+    <string name="timer_message"><b>Таймер истек</b></string>
+</resources>
