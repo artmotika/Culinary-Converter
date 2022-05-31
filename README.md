@@ -2,5 +2,5 @@
 Приложение Кулинарный конвертер
 
 <p align="center">
-![Alt text](imgs/logoConverterApp.png?raw=true "Logo")
+<img src="imgs/logoConverterApp.png" width="350" title="Logo">
 </p>
